@@ -1,0 +1,21 @@
+<div class="row">
+    <h2 class="titulo">Apps</h2>
+</div>
+<div class="row"> 
+    <h3 class="subtitulo">Más vendidas</h3>        
+</div>
+<div class="row">
+    <div *ngFor="let app of appsModel.apps" class="card" style="width: 15rem;" (click)="viewAppDetail(app)">
+        <img class="card-img-top" src='{{app.linkImg}}' alt="Card image cap">
+        <div  class="card-body" >
+            <h5 class="card-title">{{app.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{app.manufacturer}}</h6>
+        </div>
+        <div class="row justify-content-center">
+            <button class="btn btn-primary">Instalar</button>
+        </div>
+    </div>  
+</div>
+<div class="container">
+    <detail-apps *ngIf="appDetail" [app]='appDetail'></detail-apps>
+</div>

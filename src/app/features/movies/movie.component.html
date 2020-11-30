@@ -1,0 +1,22 @@
+<div class="row">
+    <h2 class="titulo">New movies</h2>
+</div>
+<div class="row"> 
+    <h3 class="subtitulo">Topsellers</h3>        
+</div>
+
+<div class="row">
+    <div *ngFor="let movie of moviesModel.movies" class="card" style="width: 15rem;" (click)="viewMovieDetail(movie)">
+        <img class="card-img-top" src='{{movie.linkImg}}' alt="Card image cap">
+        <div  class="card-body" >
+            <h5 class="card-title">{{movie.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{movie.gender}}</h6>
+        </div>
+        <div class="row justify-content-end">
+            <span class="precio justify-content-center"> L. {{movie.price}}</span>
+        </div>
+    </div>  
+</div>
+<div class="container">
+    <detail-movie *ngIf="movieDetail" [movie]='movieDetail'></detail-movie>
+</div>
