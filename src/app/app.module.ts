@@ -9,6 +9,11 @@ import { MoviesComponent } from './features/movies/movie.component';
 import { MovieDetailComponent } from './features/movies-detail/movies-detail.component';
 import { ApplicationComponent } from './features/apps/apps.component';
 import { AppDetailComponent } from './features/apps-detail/apps-detail.component';
+import { NewPageComponent } from './features/router-apps/new-page-app.component';
+import { AppRoutinModule } from './app.routing.module';
+import { NewPageMovieComponent } from './features/router-movies/new-page-movies.component';
+import { NewPageBookComponent } from './features/router-book/new-page-movie.component';
+import { HomePageComponent } from './features/router-home/page-home.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,16 @@ import { AppDetailComponent } from './features/apps-detail/apps-detail.component
     MoviesComponent,
     MovieDetailComponent,
     ApplicationComponent,
-    AppDetailComponent
+    AppDetailComponent,
+    NewPageComponent,
+    NewPageMovieComponent,
+    NewPageBookComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
+    AppRoutinModule
     
   ],
   providers: [],
