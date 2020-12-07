@@ -3,24 +3,56 @@
 <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Name</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input 
+      type="text" 
+      class="form-control" 
+      id="exampleInputEmail1" 
+      aria-describedby="emailHelp"
+      name="name"
+      [(ngModel)]="aplication.name"
+      >
       <small  class="form-text text-muted">ingrese el nombre de su aplicación.</small>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Manufacturer</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="manufacturer"
+        [(ngModel)]="aplication.manufacturer"
+        >
         <small  class="form-text text-muted">Ingrese el nombre de su empresa.</small>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">LinkImg</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="linkImg"
+        [(ngModel)]="aplication.linkImg"
+        >
         <small  class="form-text text-muted">ingrese el link de la imagen de portada de su app</small>
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="description"
+        [(ngModel)]="aplication.description"
+        >
         <small  class="form-text text-muted">Agregue una breve descripción de la funcionalidad de su app.</small>
       </div>
     
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button 
+    type="button" 
+    class="btn btn-primary"
+    (click)="save()"
+    >Save</button>
   </form>

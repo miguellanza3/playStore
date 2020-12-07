@@ -3,29 +3,67 @@
 <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Title</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input 
+      type="text" 
+      class="form-control" 
+      id="exampleInputEmail1" 
+      aria-describedby="emailHelp"
+      name="title"
+      [(ngModel)]="movies.title"
+      >
       <small  class="form-text text-muted">ingrese el titulo de la pelicula.</small>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Gender</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="gender"
+        [(ngModel)]="movies.gender"
+        >
         <small  class="form-text text-muted">Ingrese la categoria de la pelicula.</small>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">LinkImg</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="linkImg"
+        [(ngModel)]="movies.linkImg"
+        >
         <small  class="form-text text-muted">ingrese el link de la imagen de portada de su pelicula</small>
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea 
+        class="form-control" 
+        id="exampleFormControlTextarea1" 
+        rows="3"
+        name="description"
+        [(ngModel)]="movies.description"
+        ></textarea>
         <small  class="form-text text-muted">Agregue una breve sinopsis de su pelicula.</small>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Price</label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input 
+        type="number" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="price"
+        [(ngModel)]="movies.price"
+        >
         <small  class="form-text text-muted">precio de venta.</small>
       </div>
     
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button 
+    type="submit" 
+    class="btn btn-primary"
+    (click)="save()"
+    >Submit</button>
   </form>

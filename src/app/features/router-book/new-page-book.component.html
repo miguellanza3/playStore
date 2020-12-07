@@ -3,29 +3,66 @@
 <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Title</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input 
+      type="text" 
+      class="form-control" 
+      id="exampleInputEmail1" 
+      aria-describedby="emailHelp"
+      name="title"
+      [(ngModel)]="books.title"
+      >
       <small  class="form-text text-muted">ingrese el titulo de su libro.</small>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Author</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="author"
+        [(ngModel)]="books.author">
         <small  class="form-text text-muted">Ingrese el nombre del autor.</small>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">LinkImg</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="linkImg"
+        [(ngModel)]="books.linkImg"
+        >
         <small  class="form-text text-muted">ingrese el link de la imagen de portada de su libro</small>
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea 
+        class="form-control" 
+        id="exampleFormControlTextarea1" 
+        rows="3"
+        name="description"
+        [(ngModel)]="books.description"
+        ></textarea>
         <small  class="form-text text-muted">Agregue una breve sinopsis de su libro.</small>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Price</label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input 
+        type="number" 
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="emailHelp"
+        name="price"
+        [(ngModel)]="books.price"
+        >
         <small  class="form-text text-muted">precio de venta.</small>
       </div>
     
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button 
+    type="submit" 
+    class="btn btn-primary"
+    (click)="save()"
+    >Submit</button>
   </form>

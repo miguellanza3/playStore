@@ -14,6 +14,7 @@ import { AppRoutinModule } from './app.routing.module';
 import { NewPageMovieComponent } from './features/router-movies/new-page-movies.component';
 import { NewPageBookComponent } from './features/router-book/new-page-movie.component';
 import { HomePageComponent } from './features/router-home/page-home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomePageComponent } from './features/router-home/page-home.component';
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutinModule
+    AppRoutinModule,
+    FormsModule
     
   ],
   providers: [],
