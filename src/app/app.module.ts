@@ -15,6 +15,7 @@ import { NewPageMovieComponent } from './features/router-movies/new-page-movies.
 import { NewPageBookComponent } from './features/router-book/new-page-movie.component';
 import { HomePageComponent } from './features/router-home/page-home.component';
 import { FormsModule } from '@angular/forms';
+import { AppDataService } from './common/services/app-data.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
     
   ],
-  providers: [],
+  providers: [AppDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
