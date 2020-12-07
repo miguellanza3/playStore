@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
+import { AppDataService } from 'src/app/common/services/app-data.service';
 import {APP_DATA} from '../../common/models/mocks/apps-data.mock'
 
     @Component({
@@ -7,11 +8,19 @@ import {APP_DATA} from '../../common/models/mocks/apps-data.mock'
         styleUrls: ['./app.component.scss']
 })
 
-export class ApplicationComponent {
+export class ApplicationComponent implements OnInit {
     appDetail: any;
-    appsModel: any = APP_DATA;
+    appsModel: any;
 
-    viewAppDetail(app:any):void{
+    constructor(private appDataService: AppDataService){
+
+    }
+        ngOnInit(): void {
+            this.appsModel = this.appDataService.getAppData();
+            //throw new Error('Method not implemented.');
+        }
+
+        viewAppDetail(app:any):void{
         this.appDetail = app;
     }
 }
